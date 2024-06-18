@@ -20,34 +20,29 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
-import org.mockito.Mockito.`when`
+import org.mockito.Mockito
 import org.mockito.junit.MockitoJUnitRunner
-
 
 @ExperimentalCoroutinesApi
 @RunWith(MockitoJUnitRunner::class)
-class StoryViewModelTest{
+class StoryViewModelTest {
 
     @get:Rule
     val instantExecutorRule = InstantTaskExecutorRule()
 
-
     @get:Rule
     val mainDispatcherRules = MainDispatcherRule()
-
 
     @Mock
     private lateinit var storyRepository: StoryRepository
 
-
     @Test
     fun `when Get Quote Should Not Null and Return Data`() = runTest {
-
         val dummyQuote = TestStoryData.createDummyStories()
         val data: PagingData<Story> = QuotePagingSource.snapshot(dummyQuote)
         val expectedQuote = MutableLiveData<PagingData<Story>>()
         expectedQuote.value = data
-        `when`(storyRepository.getStory()).thenReturn(expectedQuote)
+        Mockito.`when`(storyRepository.getStory()).thenReturn(expectedQuote)
 
         val storyViewModel = StoryViewModel(storyRepository)
         val actualStory: PagingData<Story> = storyViewModel.story.getOrAwaitValue()
@@ -61,7 +56,6 @@ class StoryViewModelTest{
         Assert.assertNotNull(differ.snapshot())
         Assert.assertEquals(dummyQuote.size, differ.snapshot().size)
         Assert.assertEquals(dummyQuote[0], differ.snapshot()[0])
-
     }
 
     @Test
@@ -69,7 +63,7 @@ class StoryViewModelTest{
         val data: PagingData<Story> = PagingData.from(emptyList())
         val expectedQuote = MutableLiveData<PagingData<Story>>()
         expectedQuote.value = data
-        `when`(storyRepository.getStory()).thenReturn(expectedQuote)
+        Mockito.`when`(storyRepository.getStory()).thenReturn(expectedQuote)
 
         val mainViewModel = StoryViewModel(storyRepository)
         val actualQuote: PagingData<Story> = mainViewModel.story.getOrAwaitValue()
@@ -92,16 +86,13 @@ class QuotePagingSource : PagingSource<Int, LiveData<List<Story>>>() {
         }
     }
 
-
     override fun getRefreshKey(state: PagingState<Int, LiveData<List<Story>>>): Int {
         return 0
     }
 
-
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, LiveData<List<Story>>> {
         return LoadResult.Page(emptyList(), 0, 1)
     }
-
 }
 
 object TestStoryData {

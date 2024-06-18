@@ -8,3 +8,4 @@ plugins {
 buildscript {
     val agpVersion by extra("8.1.3")
 }
+
