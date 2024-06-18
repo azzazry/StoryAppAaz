@@ -23,7 +23,7 @@ class StoryPagingSource(private val apiService: StoryApi, private val token: Str
             LoadResult.Page(
                 data = response.listStory,
                 prevKey = if (position == INITIAL_PAGE_INDEX) null else position - 1,
-                nextKey = if (response.listStory.isNullOrEmpty()) null else position + 1
+                nextKey = if (response.listStory.isEmpty()) null else position + 1
             )
         } catch (exception: Exception) {
             return LoadResult.Error(exception)

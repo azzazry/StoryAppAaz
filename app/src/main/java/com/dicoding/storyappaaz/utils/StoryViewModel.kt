@@ -9,7 +9,7 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.dicoding.storyappaaz.database.StoryRepository
 import com.dicoding.storyappaaz.model.Story
-import com.dicoding.storyappaaz.utils.`object`.Injection
+import com.dicoding.storyappaaz.utils.objects.Injection
 
 class StoryViewModel(quoteRepository: StoryRepository) : ViewModel() {
 

@@ -1,4 +1,4 @@
-package com.dicoding.storyappaaz.utils.`object`
+package com.dicoding.storyappaaz.utils.objects
 
 import android.app.Application
 import android.content.Context

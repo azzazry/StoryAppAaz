@@ -9,7 +9,7 @@ import android.graphics.Matrix
 import android.net.Uri
 import android.os.Environment
 import com.dicoding.storyappaaz.R
-import com.dicoding.storyappaaz.utils.`object`.Constants
+import com.dicoding.storyappaaz.utils.objects.Constants
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream

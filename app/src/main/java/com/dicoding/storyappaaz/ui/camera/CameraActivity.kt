@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture
 import com.dicoding.storyappaaz.databinding.ActivityCameraBinding
-import com.dicoding.storyappaaz.utils.`object`.CameraUtils
-import com.dicoding.storyappaaz.utils.`object`.Constants
+import com.dicoding.storyappaaz.utils.objects.CameraUtils
+import com.dicoding.storyappaaz.utils.objects.Constants
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding

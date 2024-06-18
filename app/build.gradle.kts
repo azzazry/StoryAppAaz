@@ -87,6 +87,9 @@ dependencies {
     implementation(libs.play.services.maps)
 
     // Test dependencies
+    androidTestImplementation(libs.androidx.core.testing)
+    androidTestImplementation(libs.kotlinx.coroutines.test)
+
     //noinspection GradleDynamicVersion
     testImplementation("junit:junit:4.+")
     testImplementation(libs.androidx.core.testing)

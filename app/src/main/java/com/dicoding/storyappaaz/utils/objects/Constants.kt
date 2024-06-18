@@ -1,4 +1,4 @@
-package com.dicoding.storyappaaz.utils.`object`
+package com.dicoding.storyappaaz.utils.objects
 
 object Constants {
     const val CAMERA_X_RESULT = 200
