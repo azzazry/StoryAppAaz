@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">StoryAppAaz</string>
+    <string name="password">Masukkan Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="mohon_isi_dulu">Mohon Isi Dulu</string>
+    <string name="camera">camera</string>
+    <string name="photo">photo</string>
+    <string name="logout">Logout</string>
+    <string name="camera_x">Camera X</string>
+    <string name="image_preview">image preview</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="gallery">Gallery</string>
+    <string name="upload">Upload</string>
+    <string name="swicthes_camera">swicthes camera</string>
+    <string name="take_a_picture">take a picture</string>
+    <string name="selamat_datang_di_story_app">Selamat Datang di Story App</string>
+    <string name="normal">Normal</string>
+    <string name="satellite">Satellite</string>
+    <string name="terrain">Terrain</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="map">Map</string>
+</resources>
